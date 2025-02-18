@@ -1,0 +1,122 @@
+:root {
+    --main-color: #3498db;
+    --bg-color: #3498db;
+    /* --bg-color: #79bcff; */
+    /* --bg-color: #a7c7e7; */
+    --text-color: #ffffff;
+    --border-color: #d9d9d9;
+    --border-radius: 12px;
+    --img-radius: 8px;
+    --timing: 0.3s;
+}
+
+body {
+    font-family: Poppins، Montserrat;
+}
+
+.card {
+    /* width: 50%; */
+    width: fit-content;
+    padding: 30px;
+    background-color: var(--bg-color);
+    box-shadow: 5px 5px 5px #a7c7e7;
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+
+    @media (max-width: 768px) {
+        width: 90%;
+    }
+
+    & .card-img-top {
+        margin-top: 15px;
+        display: inline-block;
+        max-width: 100%;
+        width: 100%;
+        height: 15vw;
+        filter: drop-shadow(5px 5px 5px #a7c7e7);
+        object-fit: contain;
+        border-radius: var(--img-radius);
+        transition: var(--timing);
+
+        &:hover {
+            transform: scale(1.1);
+        }
+
+        @media (max-width: 768px) {
+            height: 30vw;
+
+        }
+    }
+
+    & .card-body {
+        text-align: start;
+        color: var(--text-color);
+
+        & hr {
+            margin: 10px 0;
+        }
+
+        & .card-title {
+            text-align: center;
+            text-transform: capitalize;
+            font-size: 2rem;
+
+            @media (max-width: 768px) {
+                font-size: 1.5rem;
+
+            }
+        }
+
+        & .list {
+            @media (max-width: 768px) {
+                margin-left: -15px;
+
+            }
+
+            & .item {
+                text-transform: capitalize;
+                font-size: 1.2rem;
+
+                @media (max-width: 768px) {
+                    font-size: 1rem;
+
+                }
+
+                & a {
+                    text-decoration: none;
+                    text-transform: none;
+                    color: var(--text-color);
+                    transition: var(--timing);
+
+                    &:hover {
+                        color: var(--border-color);
+                    }
+                }
+            }
+        }
+
+        & .btn {
+            margin-left: 35%;
+            padding: 10px 20px;
+            /* color: #0d6efd;
+            background-color: transparent; */
+            background-color: #ffffff;
+            font-size: 1.1rem;
+            font-weight: bold;
+            color: var(--main-color);
+            border-radius: 8px;
+            transition: var(--timing);
+
+            &:hover {
+                background-color: var(--main-color);
+                color: #ffffff;
+                border-color: #ffffff;
+            }
+
+            @media (max-width: 768px) {
+                margin-left: 30%;
+                padding: 7px 15px;
+            }
+        }
+    }
+}
