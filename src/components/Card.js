@@ -9,7 +9,7 @@ function Card() {
       <div className="card">
         <img src={personImg} className="card-img-top" alt="..." />
         <div className="card-body">
-          <h5 className="card-title">mohammed ibrahim amr</h5>
+          <h5 className="card-title">mohammed ibrahim</h5>
           <hr />
           <ul className="list">
             <li className="item">
